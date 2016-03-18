@@ -1,0 +1,2027 @@
+@import "modules/mixin";
+
+$border-bold-white: 4px solid #FFFFFF;
+$border-white: 1px solid #FFFFFF;
+$border-pink: 1px solid #f6cac9;
+$pink: #f6cac9;
+$blue: #91a8d2;
+$black: #303030;
+$grey: #474747;
+$white: #ffffff;
+$success: #5cb85c;
+$info:    #5bc0de;
+$warning: #f0ad4e;
+$error:  #d9534f;
+
+.homepage-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 6.571rem;
+  margin-top: 0;
+}
+
+.homepage-btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.750rem;
+  color: $white;
+  display: inline-block;
+  padding: 10px 40px;
+  border: $border-bold-white;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, .1);
+  transition: all 0.5s;
+}
+
+.message {
+  font-size: 2.75rem;
+  margin: 20px auto;
+}
+
+
+/* ==========================================================================
+	1 - RESET CSS
+=========================================================================== */
+@import "modules/reset";
+
+
+/* ==========================================================================
+	2 - WEBFONT
+=========================================================================== */
+  /*font-family: 'Playfair Display', serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'georgia', serif/
+
+
+/* ==========================================================================
+	3 - COLORS
+=========================================================================== */
+/*color: #f6cac9;*/
+
+
+/* ==========================================================================
+	4 - GLOBAL CSS
+=========================================================================== */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: $black;
+  height: 100%;
+}
+
+body {
+  height:100%;
+  position: relative;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+#wrap{
+  min-height:100%;
+  position: relative;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.medium-wrapper {
+  width: 70%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.small-wrapper {
+  width: 60%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  background-color: transparent;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 40px;
+  margin: 4px auto 0;
+  background-color: $pink;
+}
+
+#topofpage {
+  background: url('../img/topofpage.png') no-repeat;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.571rem;
+  padding: 30px 0 0 30px;
+  a {
+    color: $black;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+
+h3 {
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.571rem;
+}
+
+h4 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 2.143rem;
+}
+
+.dropdown-menu>li>a::after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 40px;
+    margin: 4px auto 0;
+    background-color: $white;
+}
+
+.help-block {
+  color: $error;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.success {
+  color: $success;
+  @extend .message;
+}
+
+.error {
+  color: $error;
+  @extend .message;
+}
+
+.warning {
+  color: $warning;
+  @extend .message;
+}
+
+.table {
+  margin-bottom: 50px;
+}
+
+.table>tbody>tr {
+  th {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  td {
+    font-size: 1.5rem;
+    a {
+      color: $blue;
+    }
+    a:hover,
+    a:focus {
+      color: $pink;
+      text-decoration: none;
+    }
+  }
+}
+
+.table>tbody>tr:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  @extend .homepage-btn;
+  font-size: 2rem;
+  color: $white;
+  background-color: $blue;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: 4px solid $white;
+}
+button:hover,
+button:focus {
+  text-decoration: none;
+  color: $blue;
+  background-color: $white;
+  border: 4px solid $blue;
+}
+
+label {
+  font-size: 1.786rem;
+}
+
+.form-control:focus {
+  border-color: $pink;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type="radio"] {
+  margin-left: 20px;
+}
+
+.btn {
+  font-size: 1.5rem;
+}
+
+.btn:active:focus,
+.btn:hover,
+.btn:focus {
+  background-color: transparent;
+  border-color: $pink;
+  outline: 5px auto $pink;
+  box-shadow: none;
+}
+
+b {
+  font-size: 1.5rem;
+}
+
+.folder {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.folder-area {
+  width: 50%;
+}
+
+.background {
+  background-color: $white;
+}
+
+.trame-others-pages {
+  background: url('../img/trame.jpg') no-repeat center;
+  height: 30px;
+}
+
+.trame-large {
+  background: url('../img/trame.jpg') no-repeat center;
+  height: 50px;
+}
+
+i {
+  margin-right: 10px;
+}
+
+em {
+  font-size: 2rem;
+}
+
+.parallax-window {
+  min-height: 500px;
+  background: transparent;
+}
+
+/********** animation on the other wedding thumbnails **********/
+.view {
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 234px;
+}
+.view .mask, .view .content {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 234px;
+}
+.view img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.view .info {
+  background:url('../img/hoverplus.png') center no-repeat;
+  display: inline-block;
+  text-decoration: none;
+  padding:0;
+  text-indent:-9999px;
+  width:60px;
+  height:60px;
+}
+.third-effect .mask {
+  opacity: 0;
+  overflow:visible;
+  border:118px solid rgba(0,0,0,0.7);
+  box-sizing:border-box;
+  transition: all 0.4s ease-in-out;
+}
+.third-effect .info {
+  position:relative;
+  top:88px; /* Center the image + */
+  opacity: 0;
+  transition: opacity 0.5s 0s ease-in-out;
+}
+.third-effect:hover .mask {
+  opacity: 1;
+  border:118px solid rgba(0,0,0,0.7);
+}
+.third-effect:hover .info {
+  opacity:1;
+  transition-delay: 0.3s;
+}
+
+/********** zoom on the thumbnails of Guadeloupe **********/
+.pic {
+  width: 430px;
+  height: 281px;
+  overflow: hidden;
+}
+
+.grow img {
+  width: 430px;
+  height: 281px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.grow img:hover {
+  -webkit-transform:scale(1.10);
+  -moz-transform:scale(1.10);
+  -ms-transform:scale(1.10);
+  -o-transform:scale(1.10);
+  transform:scale(1.10);
+}
+
+/* ==========================================================================
+	5 - HOME PAGE
+=========================================================================== */
+/********** Header **********/
+#header {
+  position: relative;
+  h1 {
+    @extend .h1;
+    span {
+      color: $pink;
+      font-weight: bold;
+    }
+  }
+}
+
+/********** Menu **********/
+#navigation {
+  margin-top: 10px;
+  margin-right: 10px;
+  a {
+    color: #000000;
+  }
+  .active {
+    color: $pink;
+  }
+  .language {
+    border: $border-white;
+  }
+  .language:hover,
+  .language:focus {
+    color: $blue;
+    border: $border-white;
+  }
+  .fr {
+    color: $blue;
+  }
+}
+
+.minor-nav {
+  font-size: 1.35rem;
+  margin-right: 2%;
+  .current {
+    background-color: transparent;
+    border: $border-pink;
+  }
+}
+
+.minor-nav>li>a {
+  padding: 5px;
+  border: $border-white;
+}
+
+.minor-nav>li>a:hover,
+.minor-nav>li>a:focus {
+  background-color: transparent;
+  border: $border-pink;
+}
+
+.main-nav {
+  font-size: 1.571rem;
+}
+
+#navigation .main-nav>li>a,
+#navigation .main-nav>li>a {
+  background-color: transparent;
+}
+
+#navigation  .main-nav>li>a::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 40px;
+  margin: 4px auto 0;
+}
+
+#navigation .main-nav>li>a:hover,
+#navigation .main-nav>li>a:focus {
+  color: $pink;
+  background-color: transparent;
+}
+
+#navigation  .main-nav>li>a:hover::after,
+#navigation  .main-nav>li>a:focus::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 40px;
+  margin: 4px auto 0;
+  background-color: $pink;
+}
+
+
+/********** Content **********/
+#main {
+  position: relative;
+  padding-bottom: 140px;
+}
+
+#main-slider {
+  background: url('../img/sliderbg.jpg') no-repeat center;
+  width: 100%;
+  height: 1072px;
+  position: relative;
+  h2 {
+    @extend .homepage-h2;
+    line-height: 0.6;
+    background-color: rgba(246,202,201,0.8);
+    color: #FFFFFF;
+    padding: 30px 40px;
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    span {
+      font-family: 'georgia', serif;
+      font-style: italic;
+      font-size: 3.5rem;
+      margin-left: 10px;
+    }
+  }
+  a:hover {
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+  }
+}
+
+#agency {
+    width: 100%;
+    height: 900px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+  h2 {
+    @extend .homepage-h2;
+    padding: 80px 0 100px;
+  }
+  figcaption {
+    font-size: 3.571rem;
+  }
+  #agency-btn {
+    @extend .homepage-btn;
+    background-color: $pink;
+    margin-top: 150px;
+  }
+  #agency-btn:hover,
+  #agency-btn:focus {
+    text-decoration: none;
+    color: $pink;
+    background-color: $white;
+    border: 4px solid $pink;
+  }
+}
+
+#agency::after {
+  content: "";
+  background: url('../img/trameagence.png');
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#guadeloupe {
+  /*background: url('../img/guadeloupebg.jpg') no-repeat center;
+  width: 100%;
+  height: 1278px;*/
+  font-family: 'Raleway', sans-serif;
+  .guadeloupe-bloc {
+    padding-bottom: 100px;
+    h2 {
+      @extend .homepage-h2;
+      padding: 80px 0 400px;
+    }
+    p {
+      color: #303030;
+      margin: 50px auto 0;
+      font-size: 4rem;
+      background-color: rgba(255,255,255,0.5);
+      width: 800px;
+      padding: 15px 0;
+    }
+    #guadeloupe-btn {
+      @extend .homepage-btn;
+      background-color: $grey;
+      margin-top: 120px;
+    }
+    #guadeloupe-btn:hover,
+    #guadeloupe-btn:focus {
+      text-decoration: none;
+      color: $grey;
+      background-color: $white;
+      border: 4px solid $grey;
+    }
+  }
+}
+
+#offer {
+  background: url('../img/Nosoffres.jpg') no-repeat center;
+  width: 100%;
+  height: 900px;
+  h2 {
+    @extend .homepage-h2;
+    color: $white;
+    padding: 80px 0;
+    position: relative;
+  }
+  h2::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 130px;
+    position: absolute;
+    left: 30%;
+    bottom: 44%;
+    background-color: $white;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 130px;
+    position: absolute;
+    left: 61%;
+    bottom: 44%;
+    background-color: $white;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.438rem;
+    color: $white;
+    margin: 20px 0 5px;
+  }
+  p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.750rem;
+  }
+  #offer-btn {
+    @extend .homepage-btn;
+    background-color: $grey;
+    margin-top: 100px;
+  }
+  #offer-btn:hover,
+  #offer-btn:focus {
+    text-decoration: none;
+    color: $grey;
+    background-color: $white;
+    border: 4px solid $grey;
+  }
+}
+
+#ourweddings {
+  a {
+    color: $white;
+  }
+  h2 {
+    @extend .homepage-h2;
+    padding: 80px 0;
+  }
+  h3 {
+    font-family: 'georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.714rem;
+    margin-top: 150px;
+  }
+  p {
+    font-family: 'georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-bottom: 200px;
+  }
+  p::before{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 200px;
+    margin: 30px auto;
+    background-color: $white;
+  }
+}
+
+#ourweddings a:hover,
+#ourweddings a:focus {
+  text-decoration: none;
+}
+
+#contact {
+  background-color: $pink;
+  height: auto;
+  color: $white;
+  h2 {
+    @extend .homepage-h2;
+    font-family: 'georgia', serif;
+    font-style: italic;
+    margin-top: 60px;
+    padding-bottom: 15px;
+  }
+  p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.571rem;
+    margin-bottom: 50px;
+  }
+  #contact-btn {
+    @extend .homepage-btn;
+    color: $white;
+    margin: 30px 0 50px;
+  }
+  #contact-btn:hover,
+  #contact-btn:focus {
+    text-decoration: none;
+    color: $pink;
+    background-color: $white;
+    border: 4px solid $pink;
+  }
+}
+
+/********** Footer **********/
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  h1 {
+    @extend .h1;
+    display: inline-block;
+    padding: 0 0 30px 30px;
+    span {
+      font-weight: bold;
+    }
+  }
+  #social {
+    display: inline-block;
+    a {
+      display: inline-block;
+    }
+    .footer-facebook {
+      width: 30px;
+      height: 30px;
+      background: url('../img/facebooklogo.png') no-repeat center;
+    }
+    a:hover .footer-facebook,
+    a:focus .footer-facebook {
+      text-decoration: none;
+      background: url('../img/facebookfooter.png') no-repeat center;
+    }
+    .footer-instagram {
+      width: 30px;
+      height: 30px;
+      background: url('../img/instalogo.png') no-repeat center;
+    }
+    a:hover .footer-instagram,
+    a:focus .footer-instagram {
+      text-decoration: none;
+      background: url('../img/instafooter.png') no-repeat center;
+    }
+
+    #instagram {
+      margin-left: 20px;
+    }
+    p {
+      display: inline;
+      margin-left: 100px;
+      font-size: 1.429rem;
+      span {
+        margin-left: 50px;
+      }
+    }
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* ==========================================================================
+	6 - AGENCY PAGE
+=========================================================================== */
+.agency {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h5 {
+    font-size: 2.143rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    span {
+      font-size: 1.714rem;
+    }
+  }
+  p {
+    font-size: 1.571rem;
+    line-height: 1.25;
+    b {
+      font-weight: bold;
+    }
+  }
+  .agency-title {
+    h3 {
+      padding-top: 50px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.714rem;
+      font-weight: bold;
+    }
+  }
+  .christina-bloc {
+    margin: 80px 70px 30px 50px;
+    .christina-bloc-img {
+      width: 30%;
+      float: left;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .christina-bloc-text {
+      width: 65%;
+      float: right;
+      margin-top: 20px;
+      span {
+        background-color: $pink;
+        padding: 1px 5px;
+      }
+    }
+  }
+  .thierry-bloc {
+    margin: 0 50px 30px 50px;
+    .thierry-bloc-text {
+      width: 60%;
+      float: left;
+      margin-top: 20px;
+      margin-left: 65px;
+      h5 {
+        text-align: right;
+        span {
+          background-color: $pink;
+          padding: 1px 5px;
+        }
+      }
+    }
+    .thierry-bloc-img {
+      width: 30%;
+      float: right;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .pascale-bloc {
+    margin: 0 100px 30px 50px;
+    .pascale-bloc-img {
+      width: 30%;
+      float: left;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .pascale-bloc-text {
+      width: 65%;
+      float: right;
+      margin-top: 20px;
+      span {
+        background-color: $pink;
+        padding: 1px 5px;
+      }
+    }
+  }
+
+  .engagement {
+    h3 {
+      margin: 30px 0;
+    }
+    p {
+      width: 65%;
+      font-size: 2.143rem;
+      margin-left: 200px;
+      margin-bottom: 30px;
+      b {
+        font-weight: bold;
+        font-size: 2.143rem;
+      }
+    }
+  }
+  .agency-offer {
+    margin-bottom: 30px;
+    h3 {
+      margin: 40px 0;
+    }
+    p {
+      font-size: 1.857rem;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    li {
+      font-size: 1.571rem;
+      width: 90%;
+      img {
+        margin-right: 5px;
+      }
+    }
+    .agency-offer-text {
+      margin-left: 190px;
+      margin-bottom: 60px;
+    }
+    a {
+      @extend .homepage-btn;
+      font-size: 2.5rem;
+      color: $white;
+      background-color: $grey;
+      border: $border-bold-white;
+      transition: all 0.5s;
+    }
+    a:hover,
+    a:focus {
+      color: $grey;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: $white;
+      border: 4px solid $grey;
+    }
+  }
+  .agency-others-pages {
+    h4 {
+      font-size: 2.143rem;
+      margin: 40px 20px 20px;
+    }
+    a {
+      color: $black;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+    figcaption {
+      margin: 20px 0 20px 5px;
+      font-size: 1.571rem;
+    }
+  }
+}
+
+
+/* ==========================================================================
+	7 - GUADELOUPE PAGE
+=========================================================================== */
+.guadeloupe {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h3 {
+    padding: 50px 0;
+  }
+  .guadeloupe-why {
+    .guadeloupe-why-img {
+      width: 40%;
+      margin-left: 25px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .guadeloupe-why-text {
+      width: 55%;
+      font-size: 1.714rem;
+      margin-right: 10px;
+      margin-top: 10px;
+      b {
+        color: $blue;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      span {
+        font-size: 1.9rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .guadeloupe-advantage {
+    background-color: $blue;
+    padding-bottom: 60px;
+    margin-top: 70px;
+    div {
+      padding: 0 50px;
+      figcaption {
+        font-size: 1.571rem;
+        color: $white;
+        margin-top: 20px;
+      }
+    }
+  }
+  .guadeloupe-what {
+    h3 {
+      margin-top: 0;
+    }
+    figure {
+      margin-bottom: 30px;
+      img {
+        margin-bottom: 10px;
+        max-width: 100%;
+        height: auto;
+      }
+      figcaption {
+        font-size: 1.286rem;
+        line-height: 1.25;
+        h5 {
+          font-size: 1.571rem;
+          font-weight: bold;
+          //margin-top: 10px;
+        }
+      }
+    }
+  }
+  .guadeloupe-bref {
+    margin-bottom: 40px;
+    h3 {
+      margin-top: 0;
+    }
+    div {
+      padding-left: 60px;
+      h4 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.571rem;
+        line-height: 1.35;
+        b {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .guadeloupe-others-pages {
+    h4 {
+      margin: 40px 20px 20px;
+    }
+    a {
+      color: $black;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+    figcaption {
+      margin: 20px 0 20px 5px;
+      font-size: 1.571rem;
+    }
+  }
+}
+
+/* ==========================================================================
+	8 - OFFRE PAGE
+=========================================================================== */
+.offer {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h3 {
+    padding: 50px 0 30px;
+    span {
+      font-size: 2.857rem;
+      color: $blue;
+    }
+  }
+  .offer-reason {
+    div {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      h4 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+      }
+      .offer-reason-img {
+        width: 30%;
+        img {
+          padding-top: 40px;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      p {
+        width: 70%;
+        font-size: 1.571rem;
+        line-height: 1.25;
+        padding-left: 35px;
+      }
+    }
+  }
+  .three-offers {
+    margin-bottom: 80px;
+    h3 {
+      padding: 20px 0;
+    }
+    .each-offer-area {
+      display: inline-block;
+      position: relative;
+      .each-offer-bloc {
+        color: $white;
+        background-color: $grey;
+        padding: 10px 10px 50px;
+        margin-right: 45px;
+        margin-left: 20px;
+        h4 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: bold;
+        }
+        figure {
+          img {
+            display: block;
+            margin: 10px 0;
+          }
+          figcaption {
+            font-size: 1.429rem;
+          }
+        }
+      }
+      .each-offer-bloc:last-child {
+        margin-right: 0;
+      }
+      a {
+        @extend .homepage-btn;
+        position:absolute;
+        display: inline-block;
+        color: $white;
+        font-size: 2.143rem;
+        line-height: 2.5;
+        background-color: #d8a55f;
+        border: $border-bold-white;
+        padding: 0 23px;
+        right: 75px;
+        bottom: -35px;
+        transition: all 0.5s;
+      }
+      a:hover,
+      a:focus {
+        color: #d8a55f;
+        border: 4px solid #d8a55f;
+        background-color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  .offer-detail {
+    margin: 60px 80px;
+    div {
+      margin-bottom: 20px;
+    }
+    .offer-detail-img {
+      width: 30%;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .offer-detail-text {
+      width: 68%;
+      margin-top: 20px;
+      img {
+        margin-right: 10px;
+      }
+      h4 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        span {
+          font-size: 1.714rem;
+          font-weight: normal;
+        }
+      }
+      p {
+        font-size: 1.714rem;
+        i {
+          font-size: 1.5rem;
+          color: #d8a55f;
+        }
+      }
+    }
+    #offer-detail-2 {
+      .offer-detail-text {
+        padding-right: 20px;
+        img {
+          margin-left: 10px;
+        }
+      }
+    }
+    a {
+      @extend .homepage-btn;
+      font-size: 2.5rem;
+      color: $white;
+      background-color: $grey;
+      border: $border-bold-white;
+      transition: all 0.5s;
+    }
+    a:hover,
+    a:focus {
+      color: $grey;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: $white;
+      border: 4px solid $grey;
+    }
+  }
+  .offer-others-pages {
+    h4 {
+      margin: 40px 20px 20px;
+    }
+    a {
+      color: $black;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+    figcaption {
+      margin: 20px 0 20px 5px;
+      font-size: 1.571rem;
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+	9 - OURWEDDINGS PAGE
+=========================================================================== */
+.ourweddings {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h3 {
+    padding: 40px 0 20px;
+  }
+  img {
+    vertical-align: bottom;
+  }
+  .toparticle {
+    margin-bottom: 45px;
+    figcaption {
+      font-family: 'Playfair Display', serif;
+      color: $white;
+      background-color: rgba(0,0,0,0.3);
+      padding: 10px 30px;
+      position: relative;
+      top: 0;
+      transition: all 0.5s;
+    }
+    .toparticle-big-picture {
+      width: 65%;
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      figure {
+        height: 470px;
+        overflow: hidden;
+        figcaption {
+          font-size: 3.571rem;
+          position: relative;
+          b {
+            font-size: 5rem;
+            position: absolute;
+            top: 12px;
+            right: 35px;
+          }
+        }
+      }
+    }
+    .toparticle-big-picture:hover figcaption,
+    .toparticle-big-picture:focus figcaption {
+      top: -91px;
+    }
+    .toparticle-small-picture-bloc {
+      width: 34%;
+      margin-left: 1%;
+      .toparticle-small-picture {
+        figure {
+          height: 230px;
+          overflow: hidden;
+          figcaption {
+            font-size: 2rem;
+            b {
+              font-size: 2.5rem;
+              position: absolute;
+              top: 17px;
+              right: 20px;
+            }
+          }
+        }
+        .toparticle-small-picture-figure {
+          margin-top: 10px;
+        }
+      }
+      .toparticle-small-picture:hover,
+      .toparticle-small-picture:focus {
+        text-decoration: none;
+      }
+      .toparticle-small-picture:hover figcaption,
+      .toparticle-small-picture:focus figcaption {
+        top: -60px;
+      }
+    }
+  }
+  .other-articles {
+    h3 {
+      padding: 20px 0;
+    }
+    a {
+      figure {
+        height: 240px;
+        overflow: hidden;
+        margin: 0 8px 20px;
+        figcaption {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.5rem;
+          color: $white;
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 10px;
+          position: relative;
+          top: 0;
+          transition: all 0.5s;
+          b {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+          }
+        }
+      }
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+    a:hover figcaption,
+    a:focus figcaption {
+      top: -50px;
+    }
+  }
+
+  .article-caret {
+    background: url('../img/more.png') no-repeat center;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+  }
+
+  .others-pages {
+    h4 {
+      margin: 40px 20px 20px;
+    }
+    a {
+      color: $black;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    figcaption {
+      margin: 20px 0 20px 5px;
+      font-size: 1.571rem;
+    }
+  }
+}
+
+/* ==========================================================================
+	10 - ARTICLE PAGE
+=========================================================================== */
+.article {
+  background: url('../img/trame.jpg') center;
+  .article-panorama-area {
+    width: 100%;
+    .article-panorama {
+      overflow: hidden;
+      position: relative;
+      img {
+        vertical-align: bottom;
+        float: right;
+      }
+      figcaption {
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        color: $white;
+        background: rgba(0,0,0,0.3);
+        display: inline-block;
+        padding: 30px 150px;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+      }
+    }
+  }
+  .article-area {
+    clear: both;
+    .trame-article {
+      background: url('../img/trame.jpg') no-repeat center;
+      height: 50px;
+    }
+    .article-path {
+      font-size: 1.571rem;
+      margin-top: 10px;
+      margin-left: 15px;
+      padding-top: 55px;
+    }
+    .article-title {
+      span {
+        font-size: 2.857rem;
+      }
+    }
+    .article-date-social {
+      position: relative;
+      .article-date {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-left: 30px;
+        margin-bottom: 10px;
+      }
+      .article-social {
+        position: absolute;
+        right: 30px;
+        top: 155px;
+        a {
+          display: inline-block;
+          margin-left: 10px;
+        }
+        .small-facebook {
+          width: 20px;
+          height: 16px;
+          background: url('../img/facebook2mini.png') center no-repeat;
+        }
+        .small-facebook:hover,
+        .small-facebook:focus {
+          background: url('../img/facebook1mini.png') center no-repeat;
+        }
+        .small-twitter {
+          width: 20px;
+          height: 16px;
+          background: url('../img/twitter2mini.png') center no-repeat;
+        }
+        .small-twitter:hover,
+        .small-twitter:focus {
+          background: url('../img/twitter1mini.png') center no-repeat;
+        }
+        .small-instagram {
+          width: 20px;
+          height: 16px;
+          background: url('../img/instagram2mini.png') center no-repeat;
+        }
+        .small-instagram:hover,
+        .small-instagram:focus {
+          background: url('../img/instagram1mini.png') center no-repeat;
+        }
+        .small-pinterest {
+          width: 20px;
+          height: 16px;
+          background: url('../img/pinterest2mini.png') center no-repeat;
+        }
+        .small-pinterest:hover,
+        .small-pinterest:focus {
+          background: url('../img/pinterest1mini.png') center no-repeat;
+        }
+      }
+    }
+    .article-content-bloc {
+      margin-bottom: 20px;
+      position: relative;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .article-content-img-left {
+        display: inline-block;
+        padding-right: 20px;
+      }
+      .article-timeline:after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $blue;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 2px;
+      }
+      .article-timeline:before {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 310px;
+        background-color: $blue;
+        position: absolute;
+        right: 8px;
+        top: 28px;
+      }
+      .article-content-title {
+        font-size: 2.143rem;
+        color: $blue;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .title-aline-right {
+        text-align: right;
+        padding-right: 25px;
+      }
+      .article-content {
+        font-size: 1.571rem;
+        line-height: 1.5;
+        padding-right: 25px;
+      }
+    }
+    .review-area {
+      width: 600px;
+      margin-left: 20%;
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'georgia', serif;
+      font-style: italic;
+      font-size: 2.143rem;
+      position: relative;
+      img {
+        margin-bottom: 10px;
+      }
+      .signature {
+        font-size: 1.714rem;
+        color: $blue;
+        margin: 40px 0 30px;
+      }
+      .signature:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100px;
+        background-color: $black;
+        position: absolute;
+        top: 120px;
+        left: 42%;
+      }
+      p:last-child {
+        font-family: 'Playfair Display', serif;
+        font-style: normal;
+      }
+      .review-social {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        a {
+          text-decoration: none;
+          display: inline-block;
+          margin-left: 10px;
+        }
+        .facebook {
+          width: 62px;
+          height: 50px;
+          background: url('../img/facebook2.png') no-repeat center;
+        }
+        .facebook:hover,
+        .facebook:focus {
+          background: url('../img/facebook1.png') no-repeat center;
+        }
+        .twitter {
+          width: 62px;
+          height: 50px;
+          background: url('../img/twitter2.png') no-repeat center;
+        }
+        .twitter:hover,
+        .twitter:focus {
+          background: url('../img/twitter1.png') no-repeat center;
+        }
+        .instagram {
+          width: 62px;
+          height: 50px;
+          background: url('../img/instagram2.png') no-repeat center;
+        }
+        .instagram:hover,
+        .instagram:focus {
+          background: url('../img/instagram1.png') no-repeat center;
+        }
+        .pinterest {
+          width: 62px;
+          height: 50px;
+          background: url('../img/pinterest2.png') no-repeat center;
+        }
+        .pinterest:hover,
+        .pinterest:focus {
+          background: url('../img/pinterest1.png') no-repeat center;
+        }
+      }
+    }
+    .article-others {
+      margin-left: 50px;
+      a {
+        figure {
+          height: 245px;
+          overflow: hidden;
+          margin: 20px 8px;
+          figcaption {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: $white;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            position: relative;
+            top: 0;
+            transition: all 0.5s;
+            b {
+              position: absolute;
+              top: 18px;
+              right: 20px;
+            }
+          }
+        }
+      }
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      a:hover figcaption,
+      a:focus figcaption {
+        top: -50px;
+      }
+    }
+    .article-others-pages {
+      h4 {
+        margin: 40px 20px 20px;
+      }
+      a {
+        color: $black;
+      }
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      figcaption {
+        font-size: 1.571rem;
+        margin: 20px 0 20px 5px;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+	11 - CONTACT PAGE
+=========================================================================== */
+.contact {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  p {
+    font-size: 1.571rem;
+    margin-bottom: 10px;
+  }
+  .contact-form {
+    margin-bottom: 10px;
+    .robot {
+      margin-top: 10px;
+    }
+    .btn-contact-area {
+      margin-top: 20px;
+    }
+    button {
+      @extend .homepage-btn;
+      font-size: 3.071rem;
+      color: $white;
+      background-color: $blue;
+      padding: 10px 60px;
+      border: 4px solid $white;
+    }
+    button:hover,
+    button:focus {
+      text-decoration: none;
+      color: $blue;
+      background-color: $white;
+      border: 4px solid $blue;
+    }
+  }
+  .caribbeanplanner-contact {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    figcaption {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 30px 0 50px;
+      span {
+        font-size: 2.286rem;
+      }
+    }
+    p {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.429rem;
+    }
+    address {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    a {
+      font-size: 1.4rem;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .guadeloupe-contact {
+      border-right: 1px solid $black;
+    }
+  }
+}
+
+/* ==========================================================================
+	11 - CUSTOMER SPACE PAGE
+=========================================================================== */
+/********** Login ***********/
+.login {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h3 {
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+  .login-form {
+    margin-bottom: 30px;
+    .login-form-input {
+      margin-bottom: 50px;
+    }
+    .btn-login {
+      a {
+        font-size: 1.5rem;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+/********** Customer Space ***********/
+.user {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h2 {
+    padding: 50px 0;
+  }
+  h3 {
+    font-family: 'Raleway', serif;
+  }
+  .user-info-bloc {
+    p, address {
+      font-size: 1.75rem;
+      margin: 20px 0;
+      b {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+    }
+    a {
+      display: inline-block;
+      margin: 20px 0 50px;
+    }
+  }
+  .user-folders {
+    margin: 30px 0;
+    div {
+      padding: 10px 0 10px 170px;
+      a {
+        font-size: 1.75rem;
+        color: $blue;
+      }
+      a:hover,
+      a:focus {
+        text-decoration: none;
+        color: $pink;
+      }
+    }
+  }
+  .user-review {
+    margin: 50px 0 100px;
+    position: relative;
+    h3 {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.75rem;
+      margin-bottom: 40px;
+      padding: 0 50px 0;
+    }
+    .review {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      line-height: 1.25;
+      b {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+    }
+    .btn-user-avis {
+      position: absolute;
+      left: 39%;
+    }
+  }
+}
+
+/********** Personal Info Form ***********/
+.user-info {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+  h2 {
+    padding: 50px 0;
+  }
+  h3 {
+    font-family: 'Raleway', serif;
+  }
+  .user-info-form {
+    position: relative;
+    padding-bottom: 30px;
+    p, address {
+      font-size: 1.75rem;
+      margin: 20px 0;
+      b {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .btn-back-user-info {
+    position: absolute;
+    bottom: 30px;
+    left: 242px;
+  }
+}
+
+/********** Personal Files ***********/
+.user-files {
+  background: url('../img/trame.jpg') center;
+  padding-top: 40px;
+  h2 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-family: 'Raleway', serif;
+  }
+  .user-files-bloc {
+    margin-bottom: 20px;
+    h4 {
+      font-family: 'Raleway', serif;
+      font-size: 2.75rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    span, a {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    a {
+      color: $blue;
+    }
+    a:hover,
+    a:focus {
+      color: $pink;
+      text-decoration: none;
+    }
+    .user-files-back {
+      display: inline-block;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+	12 - DASHBOARD PAGE
+=========================================================================== */
+.dashboard,
+.inscription,
+.customer,
+.event,
+.admin,
+.admin-article,
+.admin-picture,
+.admin-review {
+  background: url('../img/trame.jpg') center;
+  padding-top: 10px;
+}
+
+.customer,
+.event {
+  h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    margin: 50px auto 30px;
+  }
+}
+
+/********** Admin Menu **********/
+#admin-navigation {
+  margin-bottom: 30px;
+  li>a {
+    color: $black;
+    background-color: $white;
+    font-size: 2rem;
+  }
+  li>a:hover,
+  li>a:focus {
+    @extend .active;
+  }
+  .active {
+    color: $blue;
+  }
+  .active:after {
+    background-color: $blue;
+  }
+}
+
+/********** Customer Form **********/
+.customer-form {
+  padding-bottom: 40px;
+  position: relative;
+  button {
+    margin-top: 20px;
+  }
+  .btn-back-customer {
+    position: absolute;
+    bottom: 40px;
+    left: 26%;
+  }
+}
+
+/********** Event Form **********/
+.event-form {
+  padding-bottom: 40px;
+  position: relative;
+  .btn-back-event {
+    position: absolute;
+    bottom: 40px;
+    left: 1%;
+  }
+}
+
+/* ==========================================================================
+	13 - ADMIN PAGE
+=========================================================================== */
+.admin {
+  h3 {
+    font-family: 'Raleway', sans-serif;
+  }
+  h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    a {
+      color: $blue;
+    }
+    a:hover,
+    a:focus {
+      color: $pink;
+      text-decoration: none;
+    }
+  }
+  .admin-folders,
+  .admin-files {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    div {
+      padding: 10px 0 10px 170px;
+      span, a {
+          font-size: 2rem;
+      }
+      a {
+        color: $blue;
+      }
+      a:hover,
+      a:focus {
+        color: $pink;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/******** Button for uploading the files ********/
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+/* ==========================================================================
+	14 - ADMIN ARTICLE PAGE
+=========================================================================== */
+.admin-article-form {
+  padding-bottom: 30px;
+  position: relative;
+  .btn-create-article {
+    padding: 10px 40px;
+  }
+  .btn-back-article {
+    position: absolute;
+    bottom: 30px;
+    left: 26%;
+  }
+  .admin-article-form-img {
+    display: inline-block;
+    margin: 10px 0;
+  }
+}
+
+.glyphicon-edit,
+.glyphicon-trash,
+.glyphicon-download-alt,
+.publish {
+  font-size: 1.75rem;
+  margin-right: 10px;
+}
+.glyphicon-edit:hover,
+.glyphicon-edit:focus,
+.glyphicon-trash:hover,
+.glyphicon-trash:focus,
+.glyphicon-download-alt:hover,
+.glyphicon-download-alt:focus
+.publish:hover,
+.publish:focus {
+  color: $pink;
+}
+
+.admin-picture-form ,
+.admin-review-form {
+  padding-bottom: 40px;
+}
+
+/* ==========================================================================
+	20 - MEDIA QUERIES
+=========================================================================== */

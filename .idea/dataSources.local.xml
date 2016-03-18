@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - db_caribbeanplanner@localhost" uuid="ab20d230-a030-4fad-9f49-b03a4863b18a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>db_caribbeanplanner.*</schema-pattern>
+      <default-schemas>db_caribbeanplanner.*</default-schemas>
+    </data-source>
+  </component>
+</project>
